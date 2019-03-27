@@ -51,3 +51,12 @@ Where NNN is a display number (e.g.    xpra start :201)
 ```bash
 DISPLAY=:NNN idp
 ```
+
+### Step 3: Activate the license (first run only)
+Inscopix Data Processing requires a license, which we were granted. Unfortunately online activation using license number doesn't work in Ubuntu. Hence, we perform activation offline using a license confirmation file we got from Inscopix. To perform this activation follow these steps:
+
+1. Download the file ```capabilityResponse.bin``` from this repository.
+2. Upload the file to ```jersey``` using any of the methods available (```sftp```, ```sshfs```, through an external drive, etc.).
+3. After launching the Inscopix Data Processing GUI choose the option for offline activation.
+4. In the next step you are going to be asked to open the activation file. Open the ```capabilityResponse.bin``` file and confirm.
+5. Done!
