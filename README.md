@@ -60,3 +60,11 @@ Inscopix Data Processing requires a license, which we were granted. Unfortunatel
 3. After launching the Inscopix Data Processing GUI choose the option for offline activation.
 4. In the next step you are going to be asked to open the activation file. Open the ```capabilityResponse.bin``` file and confirm.
 5. Done!
+
+# Share Xpra displays across users
+1. Make sure both users are part of group ```xpra```.
+2. Launch the display with the following command:
+```bash
+xpra start --mmap-group --socket-dir=/tmp/xpra --socket-permissions=660 :NNN
+```
+3. Connect to the display as usual.
