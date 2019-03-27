@@ -37,3 +37,17 @@ Open the notebook you wish to run and proceed with your analysis.
 Deeplabcut uses a separate window to display a GUI that lets you mark the points of interest in your data. Those windows will be displayed on the Xpra screen :NNN you have specified above. In order to be able to access them open Xpra Launcher on your local computer and connect using the options: SSH, yourusernameonjersey, 10.40.11.164, port 22, NNN.
 
 Type your login password on jersey and your are good to go.
+
+## Inscopix Data Processing
+We have versions 1.2.0 and 1.1.2 installed. The full paths are ```/opt/Inscopix\ Data\ Processing\ 1.1.2/Inscopix\ Data\ Processing``` and ```/opt/Inscopix\ Data\ Processing\ 1.2.0/Inscopix\ Data\ Processing```, respectively. There is a symbolic link in ```/usr/local/bin/idp``` pointing to version's 1.2.0 executable.
+
+### Step 1: Create an Xpra display
+```bash
+xpra start :NNN
+```
+Where NNN is a display number (e.g.    xpra start :201)
+
+### Step 2: Launch Inscopix Data Processing
+```bash
+DISPLAY=:NNN idp
+```
